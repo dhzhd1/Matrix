@@ -1,0 +1,32 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: matrix-server
+# Required-Start: $remote_fs $syslog
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: AMAX Matrix Server Daemon
+# Description: This file starts and stops AMAX Matrix Server Daemon
+# 
+### END INIT INFO
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin:/opt/amax/matrix"
+
+case "$1" in
+ start)
+   /opt/amax/matrix/Server.exe&
+   ;;
+ stop)
+   ps aux | grep Server.exe | grep -v grep | awk -F\  '{ print $2 }' | xargs kill
+   sleep 5
+   ;;
+ restart)
+   ps aux | grep Server.exe | grep -v grep | awk -F\  '{ print $2 }' | xargs kill
+   sleep 5
+   /opt/amax/matrix/Server.exe&
+   ;;
+ *)
+   echo "Usage: matrix-server {start|stop|restart}" >&2
+   exit 3
+   ;;
+esac

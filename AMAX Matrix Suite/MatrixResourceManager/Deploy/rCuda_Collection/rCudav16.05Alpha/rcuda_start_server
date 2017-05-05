@@ -1,0 +1,8 @@
+
+# Usage: source rcuda_start_server
+
+killall rCUDAd
+declare -x LD_LIBRARY_PATH="/usr/local/cuda-8.0/lib64:/home/amax/rCUDAv16.11.05alpha2-CUDA8.0/lib/cudnn"
+cd /home/amax/rCUDAv16.11.05alpha2-CUDA8.0/bin/
+./rCUDAd
+cd

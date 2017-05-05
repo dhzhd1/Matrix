@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{ED882030-3DC3-4499-A14C-F5A82C94A4E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MatrixResourceManager</RootNamespace>
+    <AssemblyName>MatrixResourceManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Output\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>glade-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Project\mono_project\mysql-connector-net-6.9.8-noinstall\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Cairo" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\Pictures\logo.png" />
+    <EmbeddedResource Include="..\..\..\Pictures\Under-construction.png" />
+    <EmbeddedResource Include="..\..\..\Pictures\MatrixLogo_600x400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WidgetServerDeployment.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetServerDeployment.cs" />
+    <Compile Include="WidgetClientDeployment.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetClientDeployment.cs" />
+    <Compile Include="WidgetAgentsView.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetAgentsView.cs" />
+    <Compile Include="WidgetAssignmentView.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetAssignmentView.cs" />
+    <Compile Include="WidgetDashboardView.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetDashboardView.cs" />
+    <Compile Include="DialogModifyGpuAssign.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogModifyGpuAssign.cs" />
+    <Compile Include="DialogUnderDevelopment.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogUnderDevelopment.cs" />
+    <Compile Include="DialogConnectToServer.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogConnectToServer.cs" />
+    <Compile Include="WidgetGpuMonitor.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetGpuMonitor.cs" />
+    <Compile Include="DialogGpuAssign.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogGpuAssign.cs" />
+    <Compile Include="DialogAbout.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogAbout.cs" />
+    <Compile Include="DialogLicenseInfo.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.DialogLicenseInfo.cs" />
+    <Compile Include="WidgetMonitor.cs" />
+    <Compile Include="gtk-gui\MatrixResourceManager.WidgetMonitor.cs" />
+    <Compile Include="MatricDataReader.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Deploy\db_matrix.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\contents.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\bin\rCUDAcommIB.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\bin\rCUDAcommTCP.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\bin\rCUDAd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcublas.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcublas.so.8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcublas.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcuda.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcuda.so.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcuda.so.367.48">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudart.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudart.so.8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudart.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudnn.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudnn.so.5">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcudnn.so.5.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcufft.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcufft.so.8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcufft.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcurand.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcurand.so.8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcurand.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcusparse.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcusparse.so.8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libcusparse.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libnppc.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\libnppi.so.8.0">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\rCUDAcommIB.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\rCUDAcommTCP.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\comm\rCUDAcommIB.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\comm\rCUDAcommTCP.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\cudnn\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\cudnn\libcudnn.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\cudnn\libcudnn.so.5">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\lib\cudnn\libcudnn.so.5.1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Deploy\rCuda\doc\rCUDA_guide.pdf" />
+    <None Include="Documents\DevelopmentMemo.txt" />
+    <None Include="Documents\ProtocolPayload.sample" />
+    <None Include="Documents\README.txt" />
+    <None Include="Documents\agent.conf.sample" />
+    <None Include="Documents\server.conf.sample" />
+    <None Include="log4.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MatrixLibrary\MatrixLibrary.csproj">
+      <Project>{519F22A9-D57D-4776-BA97-BAFED8284FA3}</Project>
+      <Name>MatrixLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Deploy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Deploy\rCuda\bin\getGPUNo" />
+  </ItemGroup>
+</Project>

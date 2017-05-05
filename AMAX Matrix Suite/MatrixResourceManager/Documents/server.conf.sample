@@ -1,0 +1,11 @@
+﻿<config>
+	<config_type>server</config_type>
+	<serial_number></serial_number>
+	<database_host>127.0.0.1</database_host>
+	<database_user>root</database_user>
+	<database_pass>P@ssw0rd</database_pass>
+	<database_name>matrix</database_name>
+	<service_port>14928</service_port>
+	<service_ip>0.0.0.0</service_ip>
+</config>
+

@@ -1,0 +1,50 @@
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.gtk-gui.gui.stetic
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.logo.png
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.Under-construction.png
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.MatrixLogo_600x400.png
+/home/john/Matrix/Output/Debug/App.config
+/home/john/Matrix/Output/Debug/log4lib.config
+/home/john/Matrix/Output/Debug/Deploy/db_matrix.sql
+/home/john/Matrix/Output/Debug/Deploy/rCuda/LICENSE.txt
+/home/john/Matrix/Output/Debug/Deploy/rCuda/contents.txt
+/home/john/Matrix/Output/Debug/Deploy/rCuda/bin/rCUDAcommIB.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/bin/rCUDAcommTCP.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/bin/rCUDAd
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcublas.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcublas.so.8
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcublas.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcuda.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcuda.so.1
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcuda.so.367.48
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudart.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudart.so.8
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudart.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudnn.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudnn.so.5
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcudnn.so.5.1
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcufft.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcufft.so.8
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcufft.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcurand.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcurand.so.8
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcurand.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcusparse.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcusparse.so.8
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libcusparse.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libnppc.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/libnppi.so.8.0
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/rCUDAcommIB.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/rCUDAcommTCP.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/comm/rCUDAcommIB.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/comm/rCUDAcommTCP.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/cudnn/README
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/cudnn/libcudnn.so
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/cudnn/libcudnn.so.5
+/home/john/Matrix/Output/Debug/Deploy/rCuda/lib/cudnn/libcudnn.so.5.1
+/home/john/Matrix/Output/Debug/log4.config
+/home/john/Matrix/Output/Debug/MatrixResourceManager.exe.config
+/home/john/Matrix/Output/Debug/MatrixResourceManager.exe.mdb
+/home/john/Matrix/Output/Debug/MatrixResourceManager.exe
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.exe
+/home/john/Matrix/AMAX Matrix Suite/MatrixResourceManager/obj/x86/Debug/MatrixResourceManager.exe.mdb

@@ -1,0 +1,136 @@
+﻿[Memo]
+Configuration file types:
+	For Matrix Server : 	<config_type>server</config_type>
+	For Agent:  a) Agent Only Provide GPU Resource:   	<config_type>ResAgent</config_type>
+		    b) Agent Only for Computing Client:		<config_type>ClientAgent</config_type>
+		    c) Agent for both Share GPU and Get GPU Assignment: <config_type>MFAgent</config_type>   MF = Multiple Functional 
+		    d) I would like to remove the all of the local configuration file into the database. If the client daemon started, it should 
+		       query the database for the configuation (assignation).
+		    e) It will kept another configuration for local system administrator to limited the sharing. If some GPU or Fabric resource
+		       has been put into this file, that's mean these resource will not be used for the rCuda 
+
+
+Fabric NIC information:
+	I only get the current link speed instead of get the product spec. Two reason, 
+	a) even though 10G NIC information retrieve from "ethtool" -> Advisered Link Speed, but becuase of the physical link, 
+		the 10G means nothing, the GPU exporting still run on a 1G status. 
+	b) Not every Linux box install ethtool, that will make complicated to deploy this client agent on the vary of linux distributions. 	
+
+
+[TODO]
+1. Move the system information gathering functions to a separaet class [Resource];
+2. Create a system call class for universal invoke.
+3. Configuration file related operation should be in a separaet classs [Configuration]
+	Load, Save, Modify, Verify etc related actions.
+4. GpuResource Node should open the correct port to make sure rCuda process talk.
+5. When the application run, please check and record the mono-runtime version. (for furture debug)
+6. Check 'nvidia-smi' and 'cuda' folder existing in the system. (GPU Resource agent)
+7. Matrix log folder should be add a write rights, otherwise the log cannot be written.
+8. Below bash command doesn't work need to find a solution. 
+	"printenv | grep RCUDA | awk -F= '{ print $1 }' | xargs declare +x "
+	Another thought, I don't need this, since the session environment need to reinitialize by using source .bash file.
+9. The logic of the new agent/UUID assign still has something wrong. I need to check the Mac Address first before decide if I need to assign 
+	a new UUID to it.
+
+
+
+
+
+
+[GUI Design]
+1. Need a color schema. I temperary to decide to use the #3598DB / 53,152,219 as the bg color for the WinForm
+2. Need create a splash screen when start the application.  (that would be wonderful);
+3. I added the small icon on each menu item. But they are not shown when I compiled the programme. Need a fix.
+
+
+
+[Service Startup Script Configuration]
+A) save the below script as "matrix-server" and put it under the /etc/init.d/.
+	then use this command to set the script as a defualt init script when the system started. 
+	"$sudo update-rc.d tomcat defaults"
+
+Below script is for (init.d) script
+========================START HERE ======================================
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: matrix-server
+# Required-Start: $remote_fs $syslog
+# Required-Stop: $remote_fs $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: AMAX Matrix Server Daemon
+# Description: This file starts and stops AMAX Matrix Server Daemon
+# 
+### END INIT INFO
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin:/opt/amax/matrix"
+
+case "$1" in
+ start)
+   /opt/amax/matrix/Server.exe&
+   ;;
+ stop)
+   ps aux | grep Server.exe | grep -v grep | awk -F\  '{ print $2 }' | xargs kill
+   sleep 10
+   ;;
+ restart)
+   ps aux | grep Server.exe | grep -v grep | awk -F\  '{ print $2 }' | xargs kill
+   sleep 20
+   /opt/amax/matrix/Server.exe&
+   ;;
+ *)
+   echo "Usage: matrix-server {start|stop|restart}" >&2
+   exit 3
+   ;;
+esac
+==========================END HERE========================================
+
+
+
+
+B)//TODO. I will figure how to make this statup script take effect. Since this time demo is on a ubuntu 14.04
+below script is for (Systemd) Startup script
+===========================START HERE======================================
+[Unit]
+Description=AMAX Matrix Server Daemon
+After=network.target auditd.service
+ConditionPathExists=!/opt/amax/matrix/server_not_to_be_run
+
+[Service]
+ExecStart=/opt/amax/matrix/Server.exe
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+============================END HERE=========================================
+
+
+rCuda Configuration File:
+[rCuda Daemon Config]
+==================START HERE=============================
+# Usage: source rcuda_start_server
+
+declare -x RCUDAPROTO=TCP
+killall rCUDAd
+declare -x LD_LIBRARY_PATH="/usr/local/cuda/lib64:/opt/amax/matrix/rCuda/lib/cudnn:/opt/amax/matrix/rCuda/lib:$LD_LIBRARY_PATH"
+pushd /opt/amax/matrix/rCuda/bin/
+./rCUDAd
+popd
+
+==================END HERE===============================
+
+
+[rCuda Client Config]
+==================START HERE===============================
+# Usage: source rcuda_configure_client
+
+declare -x RCUDAPROTO=TCP
+declare -x RCUDA_DEVICE_COUNT="4"
+declare -x RCUDA_DEVICE_0="10.0.0.41:0"
+declare -x RCUDA_DEVICE_1="10.0.0.40:0"
+declare -x RCUDA_DEVICE_2="10.0.0.40:1"
+declare -x RCUDA_DEVICE_3="10.0.0.40:2"
+declare -x LD_LIBRARY_PATH="/usr/local/cuda/lib64:/opt/amax/matrix/rCuda/lib/cudnn:/opt/amax/matrix/rCuda/lib:$LD_LIBRARY_PATH"
+===================END HERE=================================

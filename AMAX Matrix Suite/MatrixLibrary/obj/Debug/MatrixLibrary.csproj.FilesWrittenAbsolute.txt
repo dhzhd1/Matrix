@@ -1,0 +1,8 @@
+/home/john/Matrix/AMAX Matrix Suite/MatrixLibrary/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/john/Matrix/Output/Debug/App.config
+/home/john/Matrix/Output/Debug/log4lib.config
+/home/john/Matrix/Output/Debug/MatrixLibrary.dll.config
+/home/john/Matrix/Output/Debug/MatrixLibrary.dll.mdb
+/home/john/Matrix/Output/Debug/MatrixLibrary.dll
+/home/john/Matrix/AMAX Matrix Suite/MatrixLibrary/obj/Debug/MatrixLibrary.dll
+/home/john/Matrix/AMAX Matrix Suite/MatrixLibrary/obj/Debug/MatrixLibrary.dll.mdb

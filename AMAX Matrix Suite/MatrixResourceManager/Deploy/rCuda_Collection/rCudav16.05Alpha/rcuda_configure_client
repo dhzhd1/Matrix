@@ -1,0 +1,11 @@
+
+# Usage: source rcuda_configure_client
+
+declare -x RCUDA_DEVICE_COUNT="4"
+declare -x RCUDA_DEVICE_0="10.0.0.41:0"
+declare -x RCUDA_DEVICE_1="10.0.0.40:0"
+declare -x RCUDA_DEVICE_2="10.0.0.40:1"
+declare -x RCUDA_DEVICE_3="10.0.0.40:2"
+
+declare -x LD_LIBRARY_PATH="/home/amax/rCUDAv16.11.05alpha2-CUDA8.0/lib"
+

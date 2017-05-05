@@ -1,0 +1,22 @@
+﻿<payload>
+	<cmd>
+		<type>Int16</type>
+		<value>103</value>
+	</cmd>
+	<parameters>
+		<parameter>
+			<type>String</type>
+			<value>2234456</value>
+		</parameter>
+
+		<parameter>
+			<type>Dictionary</type>
+			<key_type>String</key_type>
+			<value_type>String</value_type>
+			<key_value>
+				<key><>
+			</key_value>
+				
+		</parameter>
+	</parameters>
+</payload>

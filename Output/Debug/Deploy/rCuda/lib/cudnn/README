@@ -1,0 +1,10 @@
+This is a dummy CUDA Deep Neural Network library (cuDNN) to avoid
+rCUDA users installing the NVIDIA cuDNN library if they are not going
+to use this library.
+
+If you do not plan to use cuDNN, include the path to this library in
+the LD_LIBRARY_PATH environment variable in the rCUDA server node.
+
+On the contrary, if you plan to use cuDNN, remove the path to this
+library from the LD_LIBRARY_PATH environment variable in the rCUDA
+server node, and add the path to the NVIDIA cuDNN library.

@@ -1,0 +1,18 @@
+/home/john/Projects/MatrixProtocol/TestingGUI/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/john/Projects/MatrixProtocol/TestingGUI/obj/x86/Debug/TestingGUI.gtk-gui.gui.stetic
+/home/john/Projects/MatrixProtocol/TestingGUI/bin/Debug/TestingGUI.exe.mdb
+/home/john/Projects/MatrixProtocol/TestingGUI/bin/Debug/TestingGUI.exe
+/home/john/Projects/MatrixProtocol/TestingGUI/obj/x86/Debug/TestingGUI.exe
+/home/john/Projects/MatrixProtocol/TestingGUI/obj/x86/Debug/TestingGUI.exe.mdb
+/home/john/Projects/MatrixProtocol/TestingGUI/bin/Debug/MatrixProtocol.exe
+/home/john/Projects/MatrixProtocol/TestingGUI/bin/Debug/MatrixProtocol.exe.mdb
+/home/john/Projects/MatrixProtocol/TestingGUI/bin/Debug/MySql.Data.dll
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/obj/x86/Debug/TestingGUI.gtk-gui.gui.stetic
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/bin/Debug/TestingGUI.exe.mdb
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/bin/Debug/TestingGUI.exe
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/obj/x86/Debug/TestingGUI.exe
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/obj/x86/Debug/TestingGUI.exe.mdb
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/bin/Debug/MatrixLibrary.dll
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/bin/Debug/MatrixLibrary.dll.mdb
+/home/john/Matrix/AMAX Matrix Suite/TestingGUI/bin/Debug/MySql.Data.dll

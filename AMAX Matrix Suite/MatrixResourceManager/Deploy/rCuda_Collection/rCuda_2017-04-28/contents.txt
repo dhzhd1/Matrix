@@ -1,0 +1,8 @@
+Package contents:
+  - bin: rCUDA server daemon
+  - config: rCUDA configuration file
+  - doc: rCUDA user guide
+  - lib: rCUDA libraries
+  - contents.txt: this file
+  - LICENSE.txt: rCUDA terms of use
+
